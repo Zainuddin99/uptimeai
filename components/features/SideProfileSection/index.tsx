@@ -34,7 +34,7 @@ export const SideProfileSection = () => {
         height={296}
         width={296}
         alt="git profile"
-        className="w-full h-auto rounded-full"
+        className="md:w-full md:h-auto rounded-full h-36 w-36"
       />
 
       <div>

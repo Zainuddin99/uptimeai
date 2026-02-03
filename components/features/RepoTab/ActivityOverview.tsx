@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 const mockActivity = {
   username: "uptimeAI",
   repos: ["uptimeAI/uptime_webapp", "uptimeAI/uptime_server", "uptimeAI/uptime_ml"],
@@ -10,7 +8,7 @@ const mockActivity = {
 
 export default function ActivityOverview() {
   return (
-    <div className=" w-full pr-4 border-r border-r-gray-200">
+    <div className=" w-full pr-4 sm:border-r sm:border-r-gray-200">
       <h3 className="text-sm font-semibold text-gray-700 mb-3">Activity overview</h3>
 
       <p className="text-sm text-gray-600">

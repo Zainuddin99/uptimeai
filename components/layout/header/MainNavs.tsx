@@ -1,12 +1,12 @@
 import { NavIcon } from "@/components/ui/NavIcon";
 import { data } from "@/data";
-import { Bot, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import { NavIcons } from "./NavIcons";
 
 export const MainNavs = () => {
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="flex items-center justify-between ">
       <ul className="flex gap-2 items-center">
         <li>
           <NavIcon icon={Menu} />

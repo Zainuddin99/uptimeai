@@ -65,8 +65,6 @@ export const ContributionCalendar: React.FC<ContributionCalendarProps> = ({ data
       <ActivityCalendar
         data={calendarData}
         theme={theme}
-        style={{ width: "100%" }}
-        className="[&_svg]:w-full!"
         colorScheme="light"
         showWeekdayLabels
         blockSize={10}

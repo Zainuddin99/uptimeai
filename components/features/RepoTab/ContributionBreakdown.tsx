@@ -22,7 +22,7 @@ interface CustomAxisTickProps {
   cy?: number;
 }
 
-export function ContributionBreakdown(): JSX.Element {
+export function ContributionBreakdown() {
   // Mock data - arranged in order: top, right, bottom, left to create the cross pattern
   // Only Commits and Pull requests have values as shown in the original image
   const data: DataPoint[] = [
@@ -45,13 +45,7 @@ export function ContributionBreakdown(): JSX.Element {
   ];
 
   // Custom label renderer to position labels around the chart
-  const renderCustomAxisTick = ({
-    payload,
-    x,
-    y,
-    cx,
-    cy,
-  }: CustomAxisTickProps): JSX.Element | null => {
+  const renderCustomAxisTick = ({ payload, x, y }: CustomAxisTickProps): JSX.Element | null => {
     if (!payload || x === undefined || y === undefined) return null;
 
     let textAnchor: "middle" | "start" | "end" = "middle";
@@ -155,7 +149,6 @@ export function ContributionBreakdown(): JSX.Element {
             />
             <PolarAngleAxis
               dataKey="metric"
-              tick={renderCustomAxisTick}
               stroke="#4b5563"
               strokeWidth={1}
             />

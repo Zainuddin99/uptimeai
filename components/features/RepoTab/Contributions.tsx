@@ -5,7 +5,7 @@ import ActivityOverview from "./ActivityOverview";
 import { ContributionBreakdown } from "./ContributionBreakdown";
 import { DateSelector } from "./DateSelector";
 
-export const Contributions = async ({ params }) => {
+export const Contributions = async ({ params }: any) => {
   const data = await fetchContributionCalendar("shreeramk", {
     from: params.from || null,
     to: params.to || null,
@@ -16,10 +16,11 @@ export const Contributions = async ({ params }) => {
   return (
     <div className="w-full">
       <RepoTabSection title={`${totalContributions} contributions in ${year}`}>
-        <div className="grid grid-cols-[85%_13%] gap-4 w-full">
-          <div className="w-full">
+        <div className="grid grid-cols-6 gap-4 w-full">
+          <div className="w-full col-span-5">
             <ContributionCalendar data={validData} />
-            <div className="grid p-4 grid-cols-2 border border-gray-300 border-t-0 rounded-b-lg">
+
+            <div className="grid p-4 sm:grid-cols-2 border border-gray-300 border-t-0 rounded-b-lg">
               <ActivityOverview />
               <ContributionBreakdown />
             </div>

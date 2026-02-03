@@ -5,7 +5,7 @@ import Link from "next/link";
 export const RepoGrid = () => {
   return (
     <RepoTabSection title="Popular repositories">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-4">
         {data.repositories.map((item) => {
           return (
             <div
@@ -27,7 +27,7 @@ export const RepoGrid = () => {
                 <span className="mr-0.5">Forked from</span>
                 <Link
                   href={item.forkedFrom}
-                  className="hover:underline cursor-pointer"
+                  className="hover:underline cursor-pointer break-all"
                 >
                   {item.forkedFrom}
                 </Link>

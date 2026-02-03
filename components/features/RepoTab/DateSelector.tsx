@@ -6,7 +6,7 @@ export const DateSelector = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const handleParams = (item) => {
+  const handleParams = (item: number) => {
     const from = `${item}-01-01`;
     const to = `${item}-12-31`;
 

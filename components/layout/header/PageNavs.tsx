@@ -30,7 +30,7 @@ export const PageNavs = () => {
   const activeTab = searchParams.get("tab") ?? "Overview";
   return (
     <nav>
-      <ul className="flex items-center gap-2">
+      <ul className="flex items-center gap-2 overflow-x-auto no-scrollbar">
         {data.map((item) => {
           const Icon = item.icon;
           return (
