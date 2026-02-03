@@ -1,8 +1,9 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export const DateSelector = () => {
+const Selector = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -32,3 +33,9 @@ export const DateSelector = () => {
     </div>
   );
 };
+
+export const DateSelector = () => (
+  <Suspense>
+    <Selector />
+  </Suspense>
+);

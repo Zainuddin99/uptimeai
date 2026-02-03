@@ -45,7 +45,11 @@ export function ContributionBreakdown() {
   ];
 
   // Custom label renderer to position labels around the chart
-  const renderCustomAxisTick = ({ payload, x, y }: CustomAxisTickProps): JSX.Element | null => {
+  const renderCustomAxisTick = ({
+    payload,
+    x,
+    y,
+  }: CustomAxisTickProps): React.JSX.Element | null => {
     if (!payload || x === undefined || y === undefined) return null;
 
     let textAnchor: "middle" | "start" | "end" = "middle";
@@ -149,6 +153,7 @@ export function ContributionBreakdown() {
             />
             <PolarAngleAxis
               dataKey="metric"
+              tick={renderCustomAxisTick as unknown as JSX.Element}
               stroke="#4b5563"
               strokeWidth={1}
             />

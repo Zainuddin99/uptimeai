@@ -2,6 +2,7 @@
 
 import { BookMinus, BookOpen, Box, LucideIcon, PanelsTopLeft, Star } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 const data: { icon: LucideIcon; name: string; link?: string; count?: number }[] = [
   { icon: BookOpen, name: "Overview", link: "/" },
@@ -11,7 +12,7 @@ const data: { icon: LucideIcon; name: string; link?: string; count?: number }[] 
   { icon: Star, name: "Stars", count: 5 },
 ];
 
-export const PageNavs = () => {
+const Navs = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -60,3 +61,9 @@ export const PageNavs = () => {
     </nav>
   );
 };
+
+export const PageNavs = () => (
+  <Suspense>
+    <Navs />
+  </Suspense>
+);
