@@ -153,7 +153,7 @@ export function ContributionBreakdown() {
             />
             <PolarAngleAxis
               dataKey="metric"
-              tick={renderCustomAxisTick as unknown as JSX.Element}
+              tick={renderCustomAxisTick as unknown as any}
               stroke="#4b5563"
               strokeWidth={1}
             />
